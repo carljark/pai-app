@@ -102,6 +102,20 @@ describe('AiConnectionComponent', () => {
     (query('.ai-connection__copy-config') as HTMLButtonElement).click();
     await render();
     expect(writeText).toHaveBeenCalledWith(expect.stringContaining('plp_TU_TOKEN'));
+    expect(query('.ai-connection__client-note')).toBeNull();
+  });
+
+  it('explica cómo usar LibreChat u otro cliente MCP con DeepSeek o Gemini', async () => {
+    const tabs = el().querySelectorAll<HTMLButtonElement>('.ai-connection__tab');
+    expect(tabs).toHaveLength(5);
+    tabs[4]!.click();
+    await render();
+    expect(query('.ai-connection__tab--active')?.textContent).toContain('Otro cliente MCP');
+    expect(query('.ai-connection__client-note')?.textContent).toContain('DeepSeek');
+    expect(query('.ai-connection__config')?.textContent).toContain('Streamable HTTP');
+    tabs[3]!.click();
+    await render();
+    expect(query('.ai-connection__config')?.textContent).toContain('type: streamable-http');
   });
 
   it('pide confirmación antes de revocar', async () => {

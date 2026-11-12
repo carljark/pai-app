@@ -74,6 +74,9 @@
         </button>
       }
     </div>
+    @if (clientNote(); as note) {
+      <p class="ai-connection__client-note">{{ note }}</p>
+    }
     <pre class="ai-connection__config">{{ config() }}</pre>
     <button type="button" class="btn-secondary ai-connection__copy-config" (click)="copy(config())">
       {{ trans.t().aiConnectionCopy }}

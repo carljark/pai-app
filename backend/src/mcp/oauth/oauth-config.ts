@@ -40,9 +40,13 @@ export const consentUrl = (requestId: string): string => {
   return url.href;
 };
 
+/**
+ * Redirecciones de claude.ai más las de `MCP_OAUTH_REDIRECT_ALLOWLIST` (separadas por comas): la
+ * variable **amplía** la lista, así que para admitir otro cliente web basta con añadir su URL.
+ */
 const redirectAllowlist = (): string[] => {
   const configured = (process.env.MCP_OAUTH_REDIRECT_ALLOWLIST || '').split(',').map((u) => u.trim()).filter(Boolean);
-  return configured.length > 0 ? configured : DEFAULT_REDIRECT_ALLOWLIST;
+  return [...DEFAULT_REDIRECT_ALLOWLIST, ...configured];
 };
 
 const LOOPBACK_HOSTS = ['localhost', '127.0.0.1', '[::1]'];

@@ -8,6 +8,10 @@ Plappin expone un servidor **MCP** (Model Context Protocol) en `https://plappin.
    - **Claude Code:** `claude mcp add --transport http plappin https://plappin.org/api/mcp --header "Authorization: Bearer plp_…"`
    - **Claude Desktop** (`claude_desktop_config.json`, a través de `mcp-remote`): `{"mcpServers":{"plappin":{"command":"npx","args":["-y","mcp-remote","https://plappin.org/api/mcp","--header","Authorization: Bearer plp_…"]}}}`
    - **Gemini CLI** (`~/.gemini/settings.json`): `{"mcpServers":{"plappin":{"httpUrl":"https://plappin.org/api/mcp","headers":{"Authorization":"Bearer plp_…"}}}}`
+   - **LibreChat** (`librechat.yaml`): servidor `plappin` con `type: streamable-http`, `url` y `headers.Authorization`. Sirve con cualquier modelo configurado en LibreChat (DeepSeek, Gemini…).
+   - **Otro cliente MCP** (Cherry Studio, Cline, Continue…): servidor remoto «Streamable HTTP» con la URL y la cabecera `Authorization: Bearer plp_…`.
+
+   **Qué IA se puede conectar:** cualquiera que se use desde un cliente MCP con servidores remotos. Las webs de chat de Gemini y de DeepSeek no admiten servidores MCP propios, pero sus modelos se pueden usar con Plappin desde Gemini CLI, LibreChat, Cherry Studio, etc.
 3. Revocar un token en el mismo panel lo invalida al instante. Al borrar un usuario se borran sus tokens.
 
 ### claude.ai (web, escritorio y móvil): OAuth
@@ -28,7 +32,7 @@ Los conectores personalizados de claude.ai no admiten cabeceras propias: usan **
   - `OAuthClient`: clientes registrados;
   - `OAuthRequest`: peticiones pendientes de consentimiento (10 min, TTL);
   - `OAuthGrant`: autorizaciones, con el hash del código (10 min, un solo uso), del token de acceso (`plpa_…`, 1 h) y del de refresco (`plpr_…`, 30 días, con rotación). Mongo las borra al caducar (TTL).
-- **Redirecciones permitidas:** el registro es abierto, así que solo se aceptan las URL de vuelta de claude.ai y claude.com (`/api/mcp/auth_callback`) y las de loopback `http://localhost|127.0.0.1|[::1]` (clientes de escritorio). Se puede cambiar con `MCP_OAUTH_REDIRECT_ALLOWLIST` (lista separada por comas).
+- **Redirecciones permitidas:** el registro es abierto, así que solo se aceptan las URL de vuelta de claude.ai y claude.com (`/api/mcp/auth_callback`) y las de loopback `http://localhost|127.0.0.1|[::1]` (clientes de escritorio, como Gemini CLI). Para admitir otro cliente **web** con OAuth, se añade su URL de vuelta a `MCP_OAUTH_REDIRECT_ALLOWLIST` en el `.env` del servidor (separadas por comas). La variable **amplía** la lista de claude.ai, no la sustituye, y `docker-compose.prod.yml` la pasa al backend; basta con volver a desplegar.
 - **Consentimiento** (`mcp/oauth/oauth-consent.controller.ts`, con la sesión web): `GET/POST /api/oauth/requests/:id` (las cuentas pendientes no pueden autorizar) y `GET/DELETE /api/oauth/grants` (aplicaciones conectadas).
 - **Servidor MCP:** `mcpAuth` acepta tokens personales (`plp_…`) y tokens de acceso OAuth (`plpa_…`); con ambos lee el rol actual en cada petición. El 401 lleva `WWW-Authenticate: Bearer … resource_metadata="https://plappin.org/.well-known/oauth-protected-resource/api/mcp"` (y `error="invalid_token"` si llegó un token), que es lo que usa el cliente para descubrir OAuth o renovar el token.
 - **URL pública:** `PUBLIC_URL` (por defecto `https://plappin.org`) es el emisor OAuth y la base de la pantalla de consentimiento. En desarrollo: `PUBLIC_URL=http://localhost:4200`.

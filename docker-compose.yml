@@ -28,6 +28,9 @@ services:
       - JWT_SECRET=${JWT_SECRET}
       - ADMIN_EMAIL=${ADMIN_EMAIL}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      # OAuth del servidor MCP: el consentimiento se abre en el frontend de desarrollo
+      - PUBLIC_URL=${PUBLIC_URL:-http://localhost:4200}
+      - MCP_OAUTH_REDIRECT_ALLOWLIST=${MCP_OAUTH_REDIRECT_ALLOWLIST:-}
       # Forzamos el modo Polling para que Mac detecte los cambios de archivos
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true

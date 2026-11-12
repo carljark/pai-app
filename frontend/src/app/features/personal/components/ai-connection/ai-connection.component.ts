@@ -51,6 +51,11 @@ export class AiConnectionComponent implements OnInit {
     ),
   );
 
+  /** Aclaración del asistente elegido (LibreChat, otro cliente…), si la tiene. */
+  clientNote = computed(
+    () => this.trans.t().aiConnectionClientNotes?.[this.selectedClient()] ?? null,
+  );
+
   ngOnInit(): void {
     this.tokens.load().subscribe({ error: () => this.error.set(true) });
   }

@@ -28,6 +28,16 @@ describe('mcp-client-config', () => {
       httpUrl: url,
       headers: { Authorization: 'Bearer plp_x' },
     });
-    expect(MCP_CLIENTS).toHaveLength(3);
+    expect(MCP_CLIENTS).toHaveLength(5);
+  });
+
+  it('genera la configuración de LibreChat y los datos genéricos de cualquier cliente', () => {
+    const librechat = mcpClientConfig('librechat', url, 'plp_x');
+    expect(librechat).toContain('type: streamable-http');
+    expect(librechat).toContain(`url: ${url}`);
+    expect(librechat).toContain('Authorization: "Bearer plp_x"');
+    expect(mcpClientConfig('other', url, 'plp_x')).toBe(
+      `URL: ${url}\nTransport: Streamable HTTP\nAuthorization: Bearer plp_x`,
+    );
   });
 });

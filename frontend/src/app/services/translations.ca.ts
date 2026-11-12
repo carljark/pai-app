@@ -297,6 +297,14 @@ export const TRANSLATIONS_CA = {
     claudeCode: 'Claude Code',
     claudeDesktop: 'Claude Desktop',
     geminiCli: 'Gemini CLI',
+    librechat: 'LibreChat',
+    other: 'Un altre client MCP',
+  } as Record<string, string>,
+  aiConnectionClientNotes: {
+    librechat:
+      'A librechat.yaml. Serveix amb qualsevol model que tenguis configurat a LibreChat, com DeepSeek o Gemini.',
+    other:
+      'Per a Cherry Studio, Cline, Continue o un altre client compatible amb MCP: afegeix un servidor remot de tipus «Streamable HTTP» amb aquesta URL i la capçalera Authorization. Així pots fer servir Plappin amb DeepSeek, Gemini o altres models.',
   } as Record<string, string>,
 
   // CONSENTIMENT OAUTH (CONNECTORS DE CLAUDE.AI)

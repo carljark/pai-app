@@ -29,6 +29,10 @@ services:
       - JWT_SECRET=${JWT_SECRET}
       - ADMIN_EMAIL=${ADMIN_EMAIL}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      # Servidor MCP con OAuth: URL pública y URL de vuelta de otros clientes web, además de las de
+      # claude.ai (separadas por comas). Ver documentation/servidor_mcp.md.
+      - PUBLIC_URL=${PUBLIC_URL:-https://plappin.org}
+      - MCP_OAUTH_REDIRECT_ALLOWLIST=${MCP_OAUTH_REDIRECT_ALLOWLIST:-}
     ports:
       - "3000:3000" # Este es el puerto que Nginx escuchará internamente
     volumes:

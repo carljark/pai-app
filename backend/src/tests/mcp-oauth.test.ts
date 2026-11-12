@@ -75,7 +75,7 @@ const exchange = async (jwt: string) => {
 };
 
 describe('OAuth: configuración', () => {
-  it('permite claude.ai y loopback, y respeta la lista configurada', () => {
+  it('permite claude.ai y loopback, y la lista configurada amplía la de claude.ai', () => {
     expect(isAllowedRedirect(CLAUDE_CALLBACK)).toBe(true);
     expect(isAllowedRedirect('https://claude.com/api/mcp/auth_callback')).toBe(true);
     expect(isAllowedRedirect('http://localhost:6274/callback')).toBe(true);
@@ -85,7 +85,8 @@ describe('OAuth: configuración', () => {
     expect(isAllowedRedirect('no es una url')).toBe(false);
     process.env.MCP_OAUTH_REDIRECT_ALLOWLIST = ' https://otro.example/cb , ';
     expect(isAllowedRedirect('https://otro.example/cb')).toBe(true);
-    expect(isAllowedRedirect(CLAUDE_CALLBACK)).toBe(false);
+    expect(isAllowedRedirect(CLAUDE_CALLBACK)).toBe(true);
+    expect(isAllowedRedirect('https://evil.example/cb')).toBe(false);
   });
 
   it('construye la URL del consentimiento y de los metadatos con PUBLIC_URL', () => {

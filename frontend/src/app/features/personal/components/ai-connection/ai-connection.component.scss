@@ -62,6 +62,11 @@
   word-break: break-all;
 }
 
+.ai-connection__client-note {
+  margin: 8px 0 0;
+  font-size: variables.$font-size-sm;
+}
+
 .ai-connection__config {
   margin: 8px 0;
   white-space: pre-wrap;

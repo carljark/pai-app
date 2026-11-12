@@ -3,7 +3,7 @@ import { OAuthRequest } from '../../models/OAuthRequest';
 import { OAuthGrant } from '../../models/OAuthGrant';
 import { hashToken } from '../../services/api-token.service';
 import { clientsStore, randomToken } from './oauth-provider';
-import { AUTH_CODE_TTL_MS } from './oauth-config';
+import { AUTH_CODE_TTL_MS, publicUrl } from './oauth-config';
 
 const findRequest = (requestId: string) =>
   OAuthRequest.findOne({ requestId, expiresAt: { $gt: new Date() } }).lean<any>();
@@ -11,10 +11,14 @@ const findRequest = (requestId: string) =>
 /** Nombre visible del cliente: el que declaró al registrarse o, si no, el dominio de vuelta. */
 const clientNameOf = (client: any, redirectUri: string): string => client?.client_name || new URL(redirectUri).host;
 
-/** URL de vuelta al cliente con los parámetros de la respuesta OAuth. */
+/**
+ * URL de vuelta al cliente con los parámetros de la respuesta OAuth y siempre `iss` (RFC 9207),
+ * igual que el `issuer` de los metadatos: así el cliente sabe qué servidor le responde.
+ */
 const callbackUrl = (redirectUri: string, params: Record<string, string | undefined>): string => {
   const url = new URL(redirectUri);
   for (const [key, value] of Object.entries(params)) if (value) url.searchParams.set(key, value);
+  url.searchParams.set('iss', publicUrl().href);
   return url.href;
 };
 

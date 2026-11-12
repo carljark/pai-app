@@ -21,6 +21,16 @@ Los conectores personalizados de claude.ai no admiten cabeceras propias: usan **
 3. Al pulsar «Autorizar», Plappin vuelve a claude.ai con un código, que Claude canjea por los tokens. Desde entonces usa las mismas herramientas con los permisos del docente.
 4. Las conexiones aparecen en «Área Personal → Conectar con IA → Aplicaciones conectadas», desde donde se pueden desconectar.
 
+### ChatGPT (chatgpt.com): OAuth
+ChatGPT se conecta con el mismo OAuth (tarea 259): en Ajustes → Aplicaciones se activa el **modo desarrollador** y se crea una aplicación con la URL `https://plappin.org/api/mcp` y autenticación OAuth. ChatGPT se registra por registro dinámico (no anunciamos CIMD) y vuelve a una de estas dos URL, ambas permitidas:
+- `https://chatgpt.com/connector_platform_oauth_redirect` (fija), la que usa si el servidor de autorización cumple la **identificación del emisor (RFC 9207)**. Plappin la cumple:
+  - anuncia `authorization_response_iss_parameter_supported: true`;
+  - el `issuer` coincide exactamente con `authorization_servers` (`https://plappin.org/`);
+  - el consentimiento devuelve `iss` en la respuesta, tanto si se acepta como si se rechaza.
+- `https://chatgpt.com/connector/oauth/{id}` (por conexión), por si no la cumpliera; se admite con un patrón estricto.
+
+Referencia: <https://developers.openai.com/apps-sdk/build/auth>.
+
 ## OAuth 2.1 (tarea 257)
 - **Servidor de autorización del SDK** (`mcpAuthRouter`, en `mcp/oauth/oauth-router.ts`), montado en la raíz del dominio:
   - `/.well-known/oauth-authorization-server` y `/.well-known/oauth-protected-resource/api/mcp` (metadatos);

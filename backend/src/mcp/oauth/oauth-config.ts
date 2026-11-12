@@ -19,11 +19,18 @@ export const REGISTRATION_RATE_LIMIT = 200;
 export const ACCESS_TOKEN_PREFIX = 'plpa_';
 export const REFRESH_TOKEN_PREFIX = 'plpr_';
 
-/** URL de vuelta de los conectores de claude.ai (web, escritorio y móvil). */
+/** URL de vuelta de los conectores de claude.ai (web, escritorio y móvil) y la fija de ChatGPT. */
 export const DEFAULT_REDIRECT_ALLOWLIST = [
   'https://claude.ai/api/mcp/auth_callback',
-  'https://claude.com/api/mcp/auth_callback'
+  'https://claude.com/api/mcp/auth_callback',
+  'https://chatgpt.com/connector_platform_oauth_redirect'
 ];
+
+/**
+ * URL de vuelta de ChatGPT con identificador por conexión (`https://chatgpt.com/connector/oauth/{id}`),
+ * la que usa si el servidor de autorización no cumple la identificación del emisor.
+ */
+const CHATGPT_CALLBACK = /^https:\/\/chatgpt\.com\/connector\/oauth\/[A-Za-z0-9_-]+$/;
 
 export const publicUrl = (): URL => new URL(process.env.PUBLIC_URL || DEFAULT_PUBLIC_URL);
 
@@ -57,7 +64,7 @@ const LOOPBACK_HOSTS = ['localhost', '127.0.0.1', '[::1]'];
  * evita que una web ajena use el consentimiento de Plappin para llevarse tokens.
  */
 export const isAllowedRedirect = (uri: string): boolean => {
-  if (redirectAllowlist().includes(uri)) return true;
+  if (redirectAllowlist().includes(uri) || CHATGPT_CALLBACK.test(uri)) return true;
   try {
     const url = new URL(uri);
     return url.protocol === 'http:' && LOOPBACK_HOSTS.includes(url.hostname);

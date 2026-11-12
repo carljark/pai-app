@@ -328,11 +328,11 @@ export const TRANSLATIONS_ES = {
   oauthGoHome: 'Ir al inicio',
   connectedAppsTitle: 'Aplicaciones conectadas',
   connectedAppsEmpty:
-    'Ninguna. Para usar Plappin en claude.ai, añade un conector personalizado con la URL de abajo y autorízalo.',
+    'Ninguna. Para usar Plappin en claude.ai o ChatGPT, añade un conector con la URL de abajo y autorízalo.',
   connectedAppsDisconnect: 'Desconectar',
   connectedAppsConnectedOn: 'Conectada el',
   claudeAiConnectorHint:
-    'claude.ai (web, escritorio y móvil): Ajustes → Conectores → Añadir conector personalizado, con esta URL:',
+    'claude.ai (web, escritorio y móvil): Ajustes → Conectores → Añadir conector personalizado. ChatGPT: activa el modo desarrollador en Ajustes → Aplicaciones y crea una aplicación con autenticación OAuth. En ambos casos, con esta URL:',
 
   // REVISIÓN CON IA
   reviewTitle: 'Revisión con IA',

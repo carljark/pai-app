@@ -328,11 +328,11 @@ export const TRANSLATIONS_CA = {
   oauthGoHome: "Anar a l'inici",
   connectedAppsTitle: 'Aplicacions connectades',
   connectedAppsEmpty:
-    "Cap. Per fer servir Plappin a claude.ai, afegeix un connector personalitzat amb l'URL de més avall i autoritza'l.",
+    "Cap. Per fer servir Plappin a claude.ai o ChatGPT, afegeix un connector amb l'URL de més avall i autoritza'l.",
   connectedAppsDisconnect: 'Desconnectar',
   connectedAppsConnectedOn: 'Connectada el',
   claudeAiConnectorHint:
-    'claude.ai (web, escriptori i mòbil): Configuració → Connectors → Afegir connector personalitzat, amb aquesta URL:',
+    'claude.ai (web, escriptori i mòbil): Configuració → Connectors → Afegir connector personalitzat. ChatGPT: activa el mode desenvolupador a Configuració → Aplicacions i crea una aplicació amb autenticació OAuth. En tots dos casos, amb aquesta URL:',
 
   // REVISIÓ AMB IA
   reviewTitle: 'Revisió amb IA',

@@ -80,6 +80,10 @@ describe('OAuth: configuración', () => {
     expect(isAllowedRedirect('https://claude.com/api/mcp/auth_callback')).toBe(true);
     expect(isAllowedRedirect('http://localhost:6274/callback')).toBe(true);
     expect(isAllowedRedirect('http://127.0.0.1:9000/cb')).toBe(true);
+    expect(isAllowedRedirect('https://chatgpt.com/connector_platform_oauth_redirect')).toBe(true);
+    expect(isAllowedRedirect('https://chatgpt.com/connector/oauth/abc_123-XYZ')).toBe(true);
+    expect(isAllowedRedirect('https://chatgpt.com/connector/oauth/abc/../x')).toBe(false);
+    expect(isAllowedRedirect('https://chatgpt.com.evil.example/connector/oauth/abc')).toBe(false);
     expect(isAllowedRedirect('https://localhost/cb')).toBe(false);
     expect(isAllowedRedirect('https://evil.example/cb')).toBe(false);
     expect(isAllowedRedirect('no es una url')).toBe(false);
@@ -116,8 +120,13 @@ describe('OAuth: descubrimiento y registro', () => {
       authorization_endpoint: 'https://plappin.org/authorize',
       token_endpoint: 'https://plappin.org/token',
       registration_endpoint: 'https://plappin.org/register',
-      code_challenge_methods_supported: ['S256']
+      code_challenge_methods_supported: ['S256'],
+      authorization_response_iss_parameter_supported: true
     });
+    // ChatGPT exige que `issuer` y `authorization_servers` coincidan exactamente
+    expect(resource.body.authorization_servers).toEqual([as.body.issuer]);
+    const root = await request(app).get('/.well-known/oauth-protected-resource');
+    expect(root.body).toEqual(resource.body);
   });
 
   it('registra clientes con redirecciones permitidas y rechaza el resto', async () => {
@@ -146,6 +155,7 @@ describe('OAuth: autorización y consentimiento', () => {
     const back = new URL(answer.body.redirectUrl);
     expect(back.origin + back.pathname).toBe(CLAUDE_CALLBACK);
     expect(back.searchParams.get('state')).toBe('xyz');
+    expect(back.searchParams.get('iss')).toBe('https://plappin.org/');
     expect(back.searchParams.get('code')).toBeTruthy();
     expect((await request(app).post(`/api/oauth/requests/${id}`).set('Authorization', `Bearer ${jwt}`).send({ approve: true })).status).toBe(404);
   });
@@ -159,7 +169,9 @@ describe('OAuth: autorización y consentimiento', () => {
     expect((await request(app).get(`/api/oauth/requests/${id}`).set('Authorization', `Bearer ${jwt}`)).body.clientName).toBe('claude.ai');
     expect((await request(app).post(`/api/oauth/requests/${id}`).set('Authorization', `Bearer ${pending.token}`).send({ approve: true })).status).toBe(403);
     const answer = await request(app).post(`/api/oauth/requests/${id}`).set('Authorization', `Bearer ${jwt}`).send({ approve: false });
-    expect(answer.body.redirectUrl).toBe(`${CLAUDE_CALLBACK}?error=access_denied`);
+    expect(answer.body.redirectUrl).toBe(
+      `${CLAUDE_CALLBACK}?error=access_denied&iss=${encodeURIComponent('https://plappin.org/')}`
+    );
     expect(await OAuthGrant.countDocuments()).toBe(0);
   });
 
